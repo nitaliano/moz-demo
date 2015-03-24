@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {{#page.css}}
+          <link rel="stylesheet" href="{{.}}">
+        {{/page.css}}
+        
+        <script type="text/javascript" src="{{page.modernizr}}"></script>
+    </head>
+    <body>
+        <div class="dashboard">
+          {{> _header}}
+          {{> _tags}}
+          {{> _results}}
+        </div>
+        <script type="text/javascript" src="{{page.handlebars}}"></script>
+        <script type="text/javascript" src="{{page.preCompiledTemplates}}"></script>
+        <script type="text/javascript" src="{{page.requirejs.path}}" data-main="{{page.requirejs.main}}"></script>
+    </body>
+</html>

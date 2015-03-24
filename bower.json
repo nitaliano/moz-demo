@@ -1,0 +1,12 @@
+{
+  "name": "moz-demo",
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "jquery": "~2.1.3",
+    "requirejs": "~2.1.16",
+    "modernizr": "~2.8.3",
+    "backbone": "~1.1.2",
+    "underscore": "~1.8.2",
+    "handlebars": "~3.0.0"
+  }
+}

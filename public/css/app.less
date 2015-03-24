@@ -1,0 +1,64 @@
+@import "../vendor/bootstrap/less/bootstrap.less";
+
+/* overrides */
+@icon-font-path: '../vendor/bootstrap/fonts/';
+@brand-primary: #4dbdeb;
+@jumbo-bg-color: #388fb2;
+
+body {
+	background: #fff;
+}
+
+.dashboard {
+	color: #fff;
+
+	.dashboard-header,
+	.dashboard-results {
+		background-color: @jumbo-bg-color;
+		.box-shadow(0 1px 0 rgba(0, 0, 0, 0.05));
+		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.02);
+		margin-bottom: 0;
+	}
+
+	.dashboard-tags,
+	.dashboard-results {
+  	.cols {
+  		margin-top: @padding-large-horizontal;
+
+  		.panel-heading {
+  		  font-weight: bold;
+  		}
+  	}
+
+  	.col {
+			margin: @padding-base-vertical @padding-base-horizontal @padding-base-vertical 0;
+
+			.glyphicon-remove {
+				right: -6px;
+			}
+		}
+	}
+
+	.dashboard-tags {
+		margin-top: @padding-large-horizontal;
+
+		.moz-logo {
+		  img {
+	  		max-height: 64px;
+
+	  		@media (max-width: @screen-md-min) {
+	  			margin: 0 auto;
+	  		}
+	  	}
+  	}
+	}
+
+	.dashboard-results {
+		margin-top: @padding-large-horizontal;
+		color: @jumbo-bg-color;
+		
+		.no-results {
+			color: #fff;
+		}
+	}
+}
