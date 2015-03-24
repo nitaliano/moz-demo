@@ -5,5 +5,6 @@ Simple Moz Demo
 ```
 npm install
 bower install
+enter your id and secert in models > auth.js
 npm start
 ```
