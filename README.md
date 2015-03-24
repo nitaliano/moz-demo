@@ -1,9 +1,9 @@
 # moz-demo
 Simple Moz Demo
 
-Install
-###
+#Install
+```
 npm install
 bower install
 npm start
-###
+```
