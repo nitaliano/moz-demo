@@ -5,9 +5,9 @@ module.exports = {
     var i, num = bigInt(0);
 
     for (i = 0; i < vals.length; i++) {
-      num.add(vals[i]);
+      num = num.add(vals[i]);
     }
 
-    return num;
+    return num.toString();
   }
 };

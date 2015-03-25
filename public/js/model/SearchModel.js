@@ -6,8 +6,7 @@ define(function (require) {
   var SearchModel = Backbone.Model.extend({
     defaults: {
       target: '',
-      fields: [],
-      error: {}
+      cols: []
     },
 
     initialize: function () {
@@ -23,12 +22,11 @@ define(function (require) {
       
       opts.data = {
         target: this.get('target'),
-        fields: this.get('fields')
+        cols: this.get('cols')
       };
 
       $.ajax(opts)
-        .done(this._onSucess.bind(this))
-        .fail(this._onFail.bind(this));
+        .done(this._onSucess.bind(this));
     },
 
     _onSucess: function (data) {
@@ -44,10 +42,6 @@ define(function (require) {
       }
       
       this.results.reset(results);
-    },
-
-    _onFail: function (err) {
-      this.set('error', err);
     }
   });
 

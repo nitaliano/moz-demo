@@ -30,29 +30,29 @@ define(function (require) {
         el: this.$el.find('.results')
       });
 
-      this.listenTo(this.model, 'change:cols', this.render);
-
       this.listenTo(this.includedView.collection, 'remove', this.onIncludeRemove);
       this.listenTo(this.excludedView.collection, 'remove', this.onExcludeRemove);
       
       this.listenTo(this.searchModel.results, 'reset', this.onSearchResults);
-      this.searchModel.set('fields', this.includedView.collection.keys());
+      this.setIncludedFields();
+    },
+
+    setIncludedFields: function () {
+      this.searchModel.set('cols', this.includedView.collection.keys());
     },
 
     onIncludeRemove: function (model) {
       this.excludedView.update(model);
+      this.setIncludedFields();
     },
 
     onExcludeRemove: function (model) {
       this.includedView.update(model);
+      this.setIncludedFields();
     },
 
     onSearchResults: function () {
       this.resultsView.render(this.searchModel.results.toJSON());
-    },
-
-    render: function () {
-      this.$el.append(this.model.get('cols'));
     }
   });
 });

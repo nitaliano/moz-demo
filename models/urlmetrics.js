@@ -37,7 +37,6 @@ function UrlMetrics() {
   };
 
   this._totalTableValue = this._getTotalTableValue();
-  console.log(this._totalTableValue);
 }
 
 util.inherits(UrlMetrics, Base);
@@ -82,8 +81,8 @@ UrlMetrics.prototype.get = function (params, cb) {
       return cb(null, { isNotCrawled: true });
     }
 
-    if (results.title.value === '') {
-      delete results.title;
+    if (results.title && results.title.value === '') {
+      results.title.value = 'No title found';
     }
 
     return cb(null, results);
