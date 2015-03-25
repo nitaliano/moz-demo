@@ -1,7 +1,6 @@
 var gulp   = require('gulp');
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
-var soften = require('gulp-soften');
 
 var dirs = [
   './models/**/*.js', 
@@ -15,9 +14,3 @@ gulp.task('lint', function () {
     .pipe(jshint())
     .pipe(jshint.reporter(stylish));
 });
- 
-gulp.task('soften', function () {
-  gulp.src(dirs)
-    .pipe(soften(2))
-    .pipe(gulp.dest('./'));
-})
