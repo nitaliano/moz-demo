@@ -18,7 +18,7 @@ define(function (require) {
 		},
 
 		fetchData: function () {
-			var i, opts = this.get('options');
+			var opts = this.get('options');
 			
 			opts.data = {
 				target: this.get('target'),
@@ -26,16 +26,11 @@ define(function (require) {
 			};
 
 			$.ajax(opts)
-				.done(this._onSucess.bind(this))
-				.fail(this._onFail.bind(this));
+				.done(this._onSucess.bind(this));
 		},
 
 		_onSucess: function (cols) {
 			this.set('cols', cols);
-		},
-
-		_onFail: function () {
-			console.log(arguments)
 		}
 	});
 

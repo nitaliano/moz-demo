@@ -8,5 +8,5 @@ define(function (require) {
 			el: $('.dashboard'),
 			model: new AppModel()
 		});
-	}
+	};
 });

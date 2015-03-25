@@ -41,7 +41,7 @@ Base.prototype.send = function (target, params, cb) {
 };
 
 Base.prototype.convert = function (response) {
-	var self = this, cols, obj = {}, fields = response.body;
+	var self = this, obj = {}, fields = response.body;
 
 	Object.keys(fields).forEach(function (field) {
 		var name = self._inverseTable[field];

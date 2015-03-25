@@ -16,7 +16,7 @@ define(function (require) {
 		},
 
 		fetchData: function () {
-			var i, opts = {
+			var opts = {
 				type: 'GET',
 				url: '/api/urlmetrics'
 			};

@@ -1,8 +1,8 @@
-var BigInt = require('big-integer');
+var bigInt = require('big-integer');
 
 module.exports = {
 	add: function (vals) {
-		var i, num = BigInt(0);
+		var i, num = bigInt(0);
 
 		for (i = 0; i < vals.length; i++) {
 			num.add(vals[i]);
@@ -10,4 +10,4 @@ module.exports = {
 
 		return num;
 	}
-} 
+};

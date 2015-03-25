@@ -75,7 +75,7 @@ UrlMetrics.prototype.get = function (params, cb) {
 	
 	this.send(params.target, { Cols: cols, raw: params.raw }, function (err, results) {
 		if (err) {
-			return cb(err)
+			return cb(err);
 		}
 
 		if (results.httpStatusCode.value === 0) {

@@ -1,5 +1,4 @@
 define(function (require) {
-	var $ = require('jquery');
 	var Backbone = require('backbone');
 
 	var SearchModel = require('../model/SearchModel');
@@ -41,7 +40,7 @@ define(function (require) {
 		},
 
 		onIncludeRemove: function (model) {
-			this.excludedView.update(model)
+			this.excludedView.update(model);
 		},
 
 		onExcludeRemove: function (model) {
@@ -53,8 +52,7 @@ define(function (require) {
 		},
 
 		render: function () {
-			var i, keys, cols = this.model.get('cols');
-			this.$el.append(cols);
+			this.$el.append(this.model.get('cols'));
 		}
 	});
 });
